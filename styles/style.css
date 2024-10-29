@@ -95,9 +95,6 @@ fieldset {
 }
 
 .search-form__textfield {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   width: 225px;
   border: none;
   border-top: 1px solid #fff;
@@ -107,14 +104,17 @@ fieldset {
   font-weight: inherit;
   font-size: inherit;
   background-color: transparent;
-}
-
-.search-form__label {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.search-form__label {
   display: flex;
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .search-form__textfield:focus {
@@ -138,15 +138,15 @@ fieldset {
 }
 
 .search-form__label .search-form__pseudo-checkbox {
-  width: 19px;
-  height: 19px;
-  border: 1px solid #fff;
   /* display: inline-block;
   vertical-align: middle; */
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
   margin-right: 5px;
+  border: 1px solid #fff;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -161,17 +161,17 @@ fieldset {
 } 
 
 .button {
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
   border: 1px solid #fff;
+  padding: 5px 72.5px;
   color: inherit;
   font-family: inherit;
   font-weight: 700;
   font-size: inherit;
-  padding: 5px 72.5px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .search-form__submit-button {
@@ -223,9 +223,9 @@ fieldset {
 }
 
 .content__card-link:focus-visible {
+  margin: 2px;
   outline: 1px solid #fff;
   outline-offset: 1px;
-  margin: 2px;
 }
 
 .content__card-link:hover .content__video-card-title,
@@ -249,12 +249,12 @@ fieldset {
 }
 
 .title {
+  margin-bottom: 26px;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 92%;
   text-transform: uppercase;
-  margin-bottom: 26px;
 }
 
 .content__accent {
@@ -276,9 +276,9 @@ fieldset {
   flex-shrink: 0;
   width: 194px;
   height: 103px;
+  margin: 2px 2px 2px 0;
   object-fit: cover;
   object-position: center;
-  margin: 2px 2px 2px 0;
 }
 
 .content__video-card-description-container {
@@ -295,6 +295,7 @@ fieldset {
 }
 
 .content__video-card-title {
+  overflow: hidden;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
@@ -302,23 +303,22 @@ fieldset {
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
 }
 
 .content__video-card-description {
+  color: #fff;
   font-weight: 400;
   font-size: 18px;
   line-height: 90%;
   text-decoration: none;
-  color: #fff;
 }
 
 .error__title {
+  color: #fff;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 110%;
-  text-transform: uppercase;
   text-align: center;
-  color: #fff;
+  text-transform: uppercase;
 }
