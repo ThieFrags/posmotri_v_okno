@@ -16,6 +16,9 @@ html {
   background-color: #1b1919;
   inline-size: 1200px;
   block-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -58,7 +61,6 @@ fieldset {
   align-items: end;
   gap: 30px;
   width: 1140px;
-  padding-top: 133px;
 }
 
 .result {
