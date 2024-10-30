@@ -50,10 +50,6 @@ ol {
   white-space: nowrap;
 }
 
-fieldset {
-  border: none;
-}
-
 .content {
   display: flex;
   flex-direction: row;
@@ -86,6 +82,8 @@ fieldset {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  border: none;
+
 }
 
 .search-form {
@@ -97,7 +95,7 @@ fieldset {
 }
 
 .search-form__textfield {
-  width: 225px;
+  min-width: 225px;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -114,24 +112,22 @@ fieldset {
 .search-form__label {
   display: flex;
   cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 .search-form__textfield:focus {
   outline: none;
 }
 
-.search-form__label:has(:focus-visible:not(:active)) {
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
 .search-form__textfield:active {
-  outline: 1px solid #fff;
-  outline-offset: -1px;
-  /* border: 1px solid #fff; */
+  /* outline: 1px solid #fff;
+  outline-offset: -1px; */
+  border: 1px solid #fff;
+  /* Когда использую это свойство то слова в плейсхолдере начинают прыгать  */
 }
 
 .search-form__checkbox-list {
@@ -139,9 +135,7 @@ fieldset {
   gap: 15px;
 }
 
-.search-form__label .search-form__pseudo-checkbox {
-  /* display: inline-block;
-  vertical-align: middle; */
+.search-form__pseudo-checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,13 +204,13 @@ fieldset {
 
 .content__card-link {
   display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 2px;
 }
 
-.content__card-link_current {
-  background-color: #545050;
-}
-
-.content__list-item:active {
+.content__card-link_current,
+.content__card-link:active {
   background-color: #545050;
 }
 
@@ -225,13 +219,11 @@ fieldset {
 }
 
 .content__card-link:focus-visible {
-  margin: 2px;
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
-.content__card-link:hover .content__video-card-title,
-.content__card-link:hover .content__video-card-description {
+.content__card-link:hover {
   text-decoration: underline;
   text-decoration-color: #fff;
 }
@@ -287,13 +279,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  width: 100%;
   margin-top: 5px;
-}
-
-.content__card-link {
-  color: #fff;
-  text-decoration: none;
 }
 
 .content__video-card-title {
@@ -315,12 +301,4 @@ fieldset {
   text-decoration: none;
 }
 
-.error__title {
-  color: #fff;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 110%;
-  text-align: center;
-  text-transform: uppercase;
-}
+/* Спасибо большое за объяснения! */
